@@ -29,35 +29,32 @@
 </div>
 <div id="middle">
     <br />
-    <h2>Nos produits coup de <img class="img_emo" alt="coeur" src="https://www.stockholmpourlesenfants.com/wp-content/uploads/2016/03/coeur.png" /></h2>
-    <div class="img_middle">
-
+	<h2>Nos produits coup de <img class="img_emo" alt="coeur" src="https://www.stockholmpourlesenfants.com/wp-content/uploads/2016/03/coeur.png" /></h2>
+	
         <?php
 
         $item = add_all_product();
         foreach ($item as $var) {
-            echo "<a href=\"index.php?view=product&ref=" . $var['ref'] . "\" id=\"" . $var['ref'] . "\">";
+            echo "<div class='img_middle'><p>";
+			echo "<a href=\"index.php?view=product&ref=" . $var['ref'] . "\" id=\"" . $var['ref'] . "\">";
             echo "<img class=\"img_mid\" alt=\"t-shirt\" src=\" " . $var['src_img'] . "\"\>";
-            echo "</a>";
+            echo "</a>". $var['price']."&#8364</p></div>";
         }
 
         ?>
 
-    </div>
     <h2>Chaussure de Sport</h2>
-    <div class="img_middle">
 
         <?php
 
         $item = add_product_categorie("sport");
         foreach ($item as $var) {
+			echo "<div class='img_middle'><p>";
             echo "<a href=\"#\">";
             echo "<img class=\"img_mid\" alt=\"t-shirt\" src=\" " . $var['src_img'] . "\"\>";
-            echo "</a>";
+            echo "</a>". $var['price']."&#8364</p></div>";
         }
 
         ?>
-
-    </div>
 
 </div>

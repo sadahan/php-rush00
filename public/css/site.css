@@ -258,6 +258,14 @@ h2 {
 	background-size: cover; 
 }
 
+.img_middle{
+	float:left;
+	margin-left:20px;
+   }
+   
+   .img_middle p{
+   text-align:center;
+   }
 
 h3 {
 	text-align:center;
